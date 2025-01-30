@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Exercicio06 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor do produto: ");
+        Double valorProduto = scanner.nextDouble();
+
+        System.out.print("Digite a quantidade do produto que deseja: ");
+        int quantidade = scanner.nextInt();
+
+        Double subTotal = valorProduto * quantidade;
+
+        Boolean quantidadeMaiorOuIgualDez = quantidade >= 10;
+
+
+        Double percentualDesconto = 0.0;
+
+        if (quantidadeMaiorOuIgualDez) {
+            percentualDesconto = 10.0;
+        }
+
+        Double desconto = subTotal * percentualDesconto / 100;
+
+        Double valorTotalComDesconto = subTotal - desconto;
+
+        System.out.println("Valor total: " + valorTotalComDesconto);
+
+        scanner.close();
+    }
+}
+
+

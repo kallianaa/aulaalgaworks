@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Exercicio08 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor do produto: R$ ");
+        double valorProduto = scanner.nextDouble();
+
+
+        boolean valorFrete = valorProduto < 100;
+        double valorTotal 
+        if (valorTotal) {
+            valorProduto = valorFrete + 15.0;
+        } else if (valorProduto >= 100.0) {
+            valorFrete = 0.0;
+        }
+
+        System.out.print("O valor do produto com o frete será de : R$ " + valorFrete);
+
+        scanner.close();
+    }
+}

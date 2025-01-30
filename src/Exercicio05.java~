@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Exercicio05 {
+
+    static final Integer NOTA_MINIMA_PARA_PASSAR_DE_ANO = 70;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a sua nota: ");
+        int nota = scanner.nextInt();
+
+        boolean aprovado = true;
+        boolean reprovado = false;
+
+        Boolean aprovado = nota >= NOTA_MINIMA_PARA_PASSAR_DE_ANO;
+
+        if (resultado) {
+            aprovado = true;
+            System.out.print("Você foi aprovado!");
+        } else {
+            reprovado = false;
+            System.out.print("Você foi reprovado!");
+        }
+
+        System.out.print("\n (～￣▽￣)～) ");
+
+        scanner.close();
+    }
+}
