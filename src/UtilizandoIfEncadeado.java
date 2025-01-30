@@ -6,21 +6,21 @@ public class UtilizandoIfEncadeado {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Digite o peso: ");
-        Double peso = scanner.nextDouble();
+        double peso = scanner.nextDouble();
 
-//		Boolean pesoLeve = peso <= 60;
-//		Boolean pesoMedio = (peso > 60) && (peso <= 90);
-//		Boolean pesoPesado = peso > 90;
+//		boolean pesoLeve = peso <= 60;
+//		boolean pesoMedio = (peso > 60) && (peso <= 90);
+//		boolean pesoPesado = peso > 90;
 //		
 //		if (pesoLeve) {
 //			System.out.println("O lutador(a) é peso leve.");
 //		} else {
-//			Boolean pesoMedio = (peso > 60) && (peso <= 90);
+//			boolean pesoMedio = (peso > 60) && (peso <= 90);
 //			
 //			if (pesoMedio) {
 //				System.out.println("O lutador(a) é peso médio.");
 //			} else {
-//				Boolean pesoPesado = peso > 90;
+//				boolean pesoPesado = peso > 90;
 //				
 //				if (pesoPesado) {
 //					System.out.println("O lutador(a) é peso pesado.");
@@ -28,9 +28,9 @@ public class UtilizandoIfEncadeado {
 //			}
 //		}
 
-        Boolean pesoLeve = (peso <= 60) && (peso > 0);
-        Boolean pesoMedio = (peso > 60) && (peso <= 90);
-        Boolean pesoPesado = peso > 90;
+        boolean pesoLeve = (peso <= 60) && (peso > 0);
+        boolean pesoMedio = (peso > 60) && (peso <= 90);
+        boolean pesoPesado = peso > 90;
 
         if (pesoLeve) {
             System.out.println("O lutador(a) é peso leve.");
