@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PrimeiroMetodo {
+public class Exercicio18 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -42,8 +42,7 @@ public class PrimeiroMetodo {
                 && posicaoFormaPagamentoEscolhida < formasPagamento.length;
 
         if (!posicaoValida) {
-            System.err.println("Posição inválida!");
-            System.exit(1);
+            encerrarProgramaPorCausaDePosicaoInvalida();
         }
 
         String cursoEscolhido = cursos[posicaoCursoEscolhido];
@@ -58,5 +57,9 @@ public class PrimeiroMetodo {
 
     static void imprimirTraco() {
         System.out.println("----------------------------------------------");
+    }
+
+    static void encerrarProgramaPorCausaDePosicaoInvalida() {
+        System.out.println("");
     }
 }

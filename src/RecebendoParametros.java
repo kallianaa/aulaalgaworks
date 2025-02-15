@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PrimeiroMetodo {
+public class RecebendoParametros {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -11,18 +11,15 @@ public class PrimeiroMetodo {
 
         System.out.println("Escolha dentre os cursos abaixo: ");
 
-        for(int i = 0; i < cursos.length; i++) {
-            System.out.println("[" + i + "] " + cursos[i]);
-        }
+        iterarEExibirPosicoesDoVetorString(cursos);
 
         System.out.print("O curso que você deseja é o: ");
-        int posicaoCursoEscolhido = scanner.nextInt();
+        Integer posicaoCursoEscolhido = scanner.nextInt();
 
-        boolean posicaoValida = posicaoCursoEscolhido >= 0 && posicaoCursoEscolhido < cursos.length;
+        Boolean posicaoValida = posicaoCursoEscolhido >= 0 && posicaoCursoEscolhido < cursos.length;
 
         if (!posicaoValida) {
-            System.err.println("Posição inválida!");
-            System.exit(1);
+            encerrarProgramaPorCausaDaPosicaoInvalida();
         }
 
         imprimirTraco();
@@ -31,19 +28,16 @@ public class PrimeiroMetodo {
 
         System.out.println("Escolha dentre as formas de pagamento abaixo: ");
 
-        for(int i = 0; i < formasPagamento.length; i++) {
-            System.out.println("[" + i + "] " + formasPagamento[i]);
-        }
+        iterarEExibirPosicoesDoVetorString(formasPagamento);
 
         System.out.print("Sua forma de pagamento escolhida é: ");
-        int posicaoFormaPagamentoEscolhida = scanner.nextInt();
+        Integer posicaoFormaPagamentoEscolhida = scanner.nextInt();
 
         posicaoValida = posicaoFormaPagamentoEscolhida >= 0
                 && posicaoFormaPagamentoEscolhida < formasPagamento.length;
 
         if (!posicaoValida) {
-            System.err.println("Posição inválida!");
-            System.exit(1);
+            encerrarProgramaPorCausaDaPosicaoInvalida();
         }
 
         String cursoEscolhido = cursos[posicaoCursoEscolhido];
@@ -56,7 +50,18 @@ public class PrimeiroMetodo {
         scanner.close();
     }
 
+    static void iterarEExibirPosicoesDoVetorString(String[] vetor) {
+        for(int i = 0; i < vetor.length; i++) {
+            System.out.println("[" + i + "] " + vetor[i]);
+        }
+    }
+
     static void imprimirTraco() {
         System.out.println("----------------------------------------------");
+    }
+
+    static void encerrarProgramaPorCausaDaPosicaoInvalida() {
+        System.err.println("Posição inválida!");
+        System.exit(1);
     }
 }
