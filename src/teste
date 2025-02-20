@@ -6,19 +6,19 @@ Recursividade é uma técnica em programação onde uma função chama a si mesm
 
 ### Analogias para entender recursão
 
-#### 1. **A Caixa de Matrioska (Boneca Russa)**
+#### 1. A Caixa de Matrioska (Boneca Russa)**
 
 Imagine que você tem uma caixa dentro de outra caixa, dentro de outra caixa, e assim por diante. Cada caixa contém uma versão menor da mesma caixa. Esse conceito é similar à recursão. A função chama a si mesma, mas com uma versão "menor" do problema. Quando chega na caixa mais interna (ou condição de parada), a recursão começa a "desempacotar", ou seja, a função para de se chamar e resolve as partes do problema.
 
-#### 2. **Subir uma escada**
+#### 2. Subir uma escada**
 
 Imagine que você está subindo uma escada. Para subir, você dá um passo de cada vez. Quando você está no topo da escada (ou seja, atingiu a condição de parada), você para. Se você usar recursão para isso, você seria a "função" que chama a si mesma para dar um novo passo até atingir o topo. Quando você chega lá, a recursão termina e você começa a descer (ou resolve as partes anteriores).
 
 ### Como isso se aplica a código?
 
 Em Java, uma função recursiva tem dois componentes principais:
-1. **Caso base** (condição de parada): Esse é o "limite" da recursão. Quando a função atingir uma condição específica (geralmente um número ou estado), ela vai parar de chamar a si mesma.
-2. **Chamada recursiva**: A função chama a si mesma, mas com um parâmetro modificado (geralmente um valor menor ou um estado diferente).
+1. Caso base** (condição de parada): Esse é o "limite" da recursão. Quando a função atingir uma condição específica (geralmente um número ou estado), ela vai parar de chamar a si mesma.
+2. Chamada recursiva**: A função chama a si mesma, mas com um parâmetro modificado (geralmente um valor menor ou um estado diferente).
 
 ### Exemplo 1: Fatorial de um número (uma das formas clássicas de recursão)
 
@@ -54,8 +54,8 @@ public class Fatorial {
 
 **Explicação do código:**
 
-1. **Caso base:** Se `n == 0`, a função retorna `1` e não faz mais chamadas. Isso impede que a função continue chamando a si mesma indefinidamente.
-2. **Chamada recursiva:** Se `n > 0`, a função retorna `n * fatorial(n-1)`. Aqui, a função chama a si mesma com `n - 1`, o que vai criando um "empilhamento" de chamadas até que a condição de parada (n == 0) seja atingida.
+1. Caso base:** Se `n == 0`, a função retorna `1` e não faz mais chamadas. Isso impede que a função continue chamando a si mesma indefinidamente.
+2. Chamada recursiva:** Se `n > 0`, a função retorna `n * fatorial(n-1)`. Aqui, a função chama a si mesma com `n - 1`, o que vai criando um "empilhamento" de chamadas até que a condição de parada (n == 0) seja atingida.
 
 **Execução:**
 Para `fatorial(5)`, a execução seria:
@@ -87,6 +87,7 @@ public class ContagemRegressiva {
 }
 ```
 
+
 **Explicação:**
 - A função imprime o valor de `n` e depois chama a si mesma com `n - 1`.
 - O caso base ocorre quando `n` é menor que 0, parando a recursão.
@@ -94,8 +95,8 @@ public class ContagemRegressiva {
 ### Conclusão
 
 Recursão é uma forma poderosa de resolver problemas onde um problema pode ser dividido em subproblemas menores. A chave para entender e usar recursão corretamente está em:
-1. **Identificar o caso base**, que vai parar a recursão.
-2. **Chamar a função recursivamente**, geralmente com um parâmetro modificado.
+1. Identificar o caso base**, que vai parar a recursão.
+2. Chamar a função recursivamente**, geralmente com um parâmetro modificado.
 
 Ao começar com exemplos simples, como o fatorial ou uma contagem regressiva, você vai se acostumar com o conceito de recursão e como ela pode ser aplicada a problemas mais complexos.
 
