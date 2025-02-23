@@ -21,6 +21,5 @@ public class ClasseInstancia {
 
         Impressao.informacao("Produto 1: " + produto.nome);
         Impressao.informacao("Produto 2: " + produto2.nome);
-
     }
 }

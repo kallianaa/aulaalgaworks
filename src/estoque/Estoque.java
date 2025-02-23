@@ -23,6 +23,6 @@ public class Estoque {
     }
 //
 //    static boolean reporEstoque(Produto produto) {
-//        return produto.quantidadeEstoque < Produto.QUANTIDADE_MINIMA_ESTOQUE;
+//        return produto.quantidadeEstoque < Produto.quantidadeMinimaEstoque;
 //    }
 }
