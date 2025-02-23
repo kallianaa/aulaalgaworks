@@ -1,0 +1,34 @@
+Os métodos **get** e **set** são ferramentas essenciais do conceito de encapsulamento
+na programação orientada a objetos. Eles permitem controlar o acesso e a modificação dos atributos
+(variáveis de instância) de uma classe. Aqui estão alguns pontos-chave para entender quando e como usá-los:
+
+- **Getters (métodos get):**
+  - São usados para **recuperar** ou **acessar** o valor de um atributo.
+  - Permitem que outros objetos leiam o estado interno da classe sem acessar diretamente os atributos
+  (que geralmente são privados).
+
+- **Setters (métodos set):**
+  - São usados para **atribuir** ou **modificar** o valor de um atributo.
+  - Podem incluir lógica de **validação** ou **ajustes** para garantir que o novo valor
+  seja válido antes de alterá-lo.
+  - Em alguns casos, se o atributo não deve ser alterado após sua definição (ou se deve ser somente leitura),
+  você pode optar por não criar um setter.
+
+- **Exemplo no seu código:**
+  - A classe `Pedido` tem atributos como `codigo`, `subtotal` e `desconto` que são manipulados
+  via getters e setters.
+  - O método `getTotal()` calcula o valor total subtraindo o desconto do subtotal.
+  Aqui, não há necessidade de um setter para o total, pois esse valor é **derivado** e
+  depende dos outros atributos. Definir um setter para o total poderia levar a inconsistências,
+  já que ele deveria refletir sempre a operação `subtotal - desconto`.
+
+- **Quando usar cada um:**
+  - Use o **getter** sempre que precisar **acessar** um valor de um atributo para exibi-lo,
+  realizar cálculos ou tomar decisões dentro do código.
+  - Use o **setter** quando for necessário **alterar** o valor de um atributo,
+  especialmente se for preciso aplicar regras ou validações (por exemplo, evitar que o desconto seja negativo).
+
+Em resumo, os getters e setters ajudam a **proteger os dados** da classe,
+permitindo que a lógica interna seja modificada sem afetar o código que utiliza a classe.
+Essa abordagem é especialmente útil para manter a **integridade dos dados** e
+facilitar futuras alterações no comportamento interno da classe sem quebrar a interface pública.

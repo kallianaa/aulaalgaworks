@@ -16,13 +16,13 @@ public class Estoque {
         System.out.print("Informe a quantidade em estoque do produto " + produto.nome + ": ");
         produto.quantidadeEstoque = scanner.nextInt();
 
-        boolean precisaReposicao = reporEstoque(produto);
-        System.out.println("Necessário repor estoque do produto " + produto.nome + "? " + precisaReposicao);
+//        boolean precisaReposicao = reporEstoque(produto);
+        System.out.println("Necessário repor estoque do produto " + produto.nome + "? " + produto.reporEstoque()); //
 
         scanner.close();
     }
-
-    static boolean reporEstoque(Produto produto) {
-        return produto.quantidadeEstoque < Produto.QUANTIDADE_MINIMA_ESTOQUE;
-    }
+//
+//    static boolean reporEstoque(Produto produto) {
+//        return produto.quantidadeEstoque < Produto.QUANTIDADE_MINIMA_ESTOQUE;
+//    }
 }
