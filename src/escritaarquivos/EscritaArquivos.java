@@ -21,7 +21,7 @@ public class EscritaArquivos {
             linhas.add(nome);
         }
 
-        Path arquivo = Paths.get("C:\\Users\\Kalliana\\OneDrive\\Área de Trabalho\\algaworks\\arquivo.txt");
+        Path arquivo = Paths.get("C:\\Users\\....\\algaworks\\arquivo.txt"); //fica aqui o caminho da pasta
         Files.write(arquivo, linhas);
 
         scanner.close();

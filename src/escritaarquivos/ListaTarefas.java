@@ -28,7 +28,7 @@ public class ListaTarefas {
             i++;
         }
 
-        Path arquivo = Paths.get("C:\\Users\\Kalliana\\OneDrive\\Área de Trabalho\\algaworks\\listaTarefas.txt");
+        Path arquivo = Paths.get("C:\\Users\\....\\algaworks\\listaTarefas.txt"); //fica aqui o caminho da pasta
         Files.write(arquivo, linhas);
         System.out.println("Arquivo criado com sucesso!");
         scanner.close();
